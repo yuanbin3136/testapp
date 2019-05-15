@@ -70,7 +70,7 @@ xxxx`111111`xxxx`一段` `文字`中用\`包起来\`
 
 [[title] (url)](www.baidu.com) [title] (url)
 
-[回到顶部](#3#的标题)
+[回到顶部](#3的标题)
 
 [详解网页](https://github.com/guodongxiaren/README)
 
@@ -92,7 +92,9 @@ xxxx`111111`xxxx`一段` `文字`中用\`包起来\`
 >>>>> 满二叉树
 
 ```java
-public static void main(String[]args){} //```Java code
+public static void main(String[]args){
+    
+} //```Java code
 ```
 
 ```diff
