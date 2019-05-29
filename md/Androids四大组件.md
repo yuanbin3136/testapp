@@ -48,3 +48,19 @@
 ## ContentProvider 内容提供者，用数据库共享数据
 
 ## BroadcastReceiver 广播接收者，接收广播来达到通信的目的
+
+- 静态注册广播接收者
+    * 在清单文件中注册，例如开机广播android.intent.action.BOOT_COMPLETED（这个还需要申请权限android.permission.RECEIVE_BOOT_COMPLETED）
+    * 在onRecive中接受
+    * 获取传递的参数（基本类型，序列化的数据）
+- 动态注册广播接收者
+    * 在代码中注册，context.register(),设置action，例如在Activity中接受某些任务完成，屏幕锁定等
+    * 在不需要的时候注销,onDesotry中，context.unregister
+- adb测试广播
+    * 通过adb 发送广播进行测试，曾经在项目中使用这种方式开启、关闭日志打印；
+    ```
+     adb shell am broadcast -a wind.action --es string "asdfasdf"
+    ```
+- //TODO 权限 exported属性 
+ // 有序、无序广播
+ 

@@ -1,10 +1,16 @@
 package com.wind.yuanbin.testapp;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.wind.yuanbin.testapp.receiver.ReceiverActivity;
 import com.wind.yuanbin.testapp.utils.ToastUtils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,7 +37,24 @@ public class MainActivity extends AppCompatActivity {
                 utils.show();
             }
         });
+        a(list.get(0));
     }
     int i;
 
+    static List<A> list = new ArrayList<>();
+    static {
+        list.add(new A("广播",ReceiverActivity.class));
+    }
+    static class A{
+        String name;
+        Class activityClass;
+        public A(String name, Class activityClass){
+            this.name = name;
+            this.activityClass = activityClass;
+        }
+    }
+    private void a(A a){
+        Intent intent = new Intent(this, a.activityClass);
+        startActivity(intent);
+    }
 }
