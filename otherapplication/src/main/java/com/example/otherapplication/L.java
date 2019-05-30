@@ -1,4 +1,4 @@
-package com.wind.yuanbin.testapp.utils;
+package com.example.otherapplication;
 
 import android.util.Log;
 

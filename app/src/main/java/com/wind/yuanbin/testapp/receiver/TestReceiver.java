@@ -20,7 +20,7 @@ public class TestReceiver extends BroadcastReceiver {
         L.o(action + " xx " + s);
         if (action.equals(Intent.ACTION_PACKAGE_ADDED)){
             String packageName = intent.getData().getSchemeSpecificPart();
-            L.o("packageName" + packageName);
+            L.o("packageName: " + packageName);
 
         }
     }

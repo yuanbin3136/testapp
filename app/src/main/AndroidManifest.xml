@@ -2,9 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wind.yuanbin.testapp">
 
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" ></uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".App"
@@ -14,19 +14,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".receiver.ReceiverActivity"></activity>
-
-        <!--android:enabled="false"
-            android:exported="false"-->
         <receiver
-            android:name=".receiver.TestReceiver"
->
+            android:name=".receiver.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="wind.action" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".receiver.ReceiverActivity" />
+        <!--
+android:enabled="false"
+            android:exported="false"
+        -->
+        <receiver android:name=".receiver.TestReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.PACKAGE_INSTALL"/>
-                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
-                <action android:name="android.intent.action.PACKAGE_ADDED"/>
-                <action android:name="wind.test"/>
+                <action android:name="android.intent.action.PACKAGE_INSTALL" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="wind.test" />
+
                 <data android:scheme="package" />
             </intent-filter>
         </receiver>

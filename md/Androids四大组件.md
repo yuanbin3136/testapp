@@ -61,6 +61,16 @@
     ```
      adb shell am broadcast -a wind.action --es string "asdfasdf"
     ```
-- //TODO 权限 exported属性 
- // 有序、无序广播
+- exported属性 
+ ```
+ 默认为true，表示可以接受来自其他应用的广播
+ ```
+- 一些特殊情况
+ ``` 
+ 接受应用的安装完成广播android.intent.action.PACKAGE_ADDED
+ 需要在intentfilter里添加<data android:scheme="package" />，不然收不到，
+ 添加了以后其他类型（自定义的action）就无效了。
  
+ ```
+- // 有序、无序广播
+ //TODO 权限 

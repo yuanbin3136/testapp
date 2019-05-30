@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent();
         intent.putExtra("string",msg);
         intent.setAction(ACTION);
+//        intent.setFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
         context.sendBroadcast(intent);
     }
 }
