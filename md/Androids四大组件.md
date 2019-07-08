@@ -70,7 +70,8 @@
  接受应用的安装完成广播android.intent.action.PACKAGE_ADDED
  需要在intentfilter里添加<data android:scheme="package" />，不然收不到，
  添加了以后其他类型（自定义的action）就无效了。
- 
  ```
+ 
+  [AndroidManifest.xml](https://github.com/yuanbin3136/testapp/blob/master/otherapplication/src/main/AndroidManifest.xml)
 - // 有序、无序广播
  //TODO 权限 

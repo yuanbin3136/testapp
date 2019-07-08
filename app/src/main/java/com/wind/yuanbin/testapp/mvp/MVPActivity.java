@@ -13,7 +13,7 @@ public class MVPActivity extends BaseActivity<MVPPresenter> implements Contract.
 
     @Override
     public void getToday() {
-
+        mPersenter.getToday();
     }
 
     @Override

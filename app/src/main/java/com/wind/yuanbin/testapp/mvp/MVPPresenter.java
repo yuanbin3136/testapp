@@ -12,7 +12,7 @@ public class MVPPresenter extends BasePresenter<Contract.UIView> implements Cont
 
     @Override
     public void getToday() {
-        view.getToday();
+
     }
 
     @Override
