@@ -24,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 i++;
 //                ToastUtils.a(" xxx " + i);
-                ToastUtils.b("i " + i);
+//                ToastUtils.b("i " + i);
+                toOtherAct();
             }
         });
 
@@ -39,6 +40,13 @@ public class MainActivity extends AppCompatActivity {
         });
         a(list.get(0));
     }
+
+    private void toOtherAct() {
+        Intent intent = new Intent();
+        intent.setAction("com.wind.action");
+        startActivity(intent);
+    }
+
     int i;
 
     static List<A> list = new ArrayList<>();

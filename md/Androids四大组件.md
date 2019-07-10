@@ -16,15 +16,21 @@
     * A.onStop
 
 * 2.四种启动模式
-- standard 标准
-- singleTop 栈顶复用
-    Activity位于栈顶部时复用，调用onNewIntent方法，可用于从通知栏音乐进入App这类场景。
-- singleTask 栈内复用
-    栈内已经有就复用，复用时会销毁中间的Activity,用于详情页，浏览器标签页这类场景。
-- singleInstance 独立栈
-    独立的栈，按返回时可不返回本应用的其他页面，适用于快捷功能，地图软件的地铁图这类场景。
+    - standard 标准
+    - singleTop 栈顶复用
+        Activity位于栈顶部时复用，调用onNewIntent方法，可用于从通知栏音乐进入App这类场景。
+    - singleTask 栈内复用
+        栈内已经有就复用，复用时会销毁中间的Activity,用于详情页，浏览器标签页这类场景。
+    - singleInstance 独立栈
+        独立的栈，按返回时可不返回本应用的其他页面，适用于快捷功能，地图软件的地铁图这类场景。
     
-* 3.
+* 3.跳转方式
+    * Intent意图对象
+        - 显示意图 （应用内部调用）
+        Intent intent = new Intent(this,B.class);
+        - 隐式意图 （可用于打开其他应用，比如系统的相册、照相机）
+        intent.setAction("");// 可在清单文件中自定义
+        [AndroidManifest.xml](https://github.com/yuanbin3136/testapp/blob/master/otherapplication/src/main/AndroidManifest.xml)
 
 
 
